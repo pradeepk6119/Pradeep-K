@@ -45,12 +45,14 @@ export function AccountsPage() {
         </div>
         
         <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-          <DialogTrigger asChild>
-            <Button className="bg-slate-900 text-white hover:bg-slate-800 rounded-xl px-6 h-12 font-bold uppercase tracking-widest text-[10px]">
-              <Plus size={14} className="mr-2" />
-              New Identity
-            </Button>
-          </DialogTrigger>
+          <DialogTrigger 
+            render={
+              <Button className="bg-slate-900 text-white hover:bg-slate-800 rounded-xl px-6 h-12 font-bold uppercase tracking-widest text-[10px]">
+                <Plus size={14} className="mr-2" />
+                New Identity
+              </Button>
+            }
+          />
           <DialogContent className="sm:max-w-[425px] rounded-2xl border-slate-100">
             <DialogHeader>
               <DialogTitle className="text-lg font-bold tracking-tight">Open New Account</DialogTitle>
