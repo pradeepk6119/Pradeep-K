@@ -1,0 +1,67 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile and settings",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string" },
+        "displayName": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["uid", "email"]
+    },
+    "Account": {
+      "title": "Bank Account",
+      "description": "Financial account details",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "name": { "type": "string" },
+        "type": { "type": "string", "enum": ["checking", "savings", "credit"] },
+        "balance": { "type": "number" },
+        "currency": { "type": "string" },
+        "accountNumber": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "name", "type", "balance", "accountNumber"]
+    },
+    "Transaction": {
+      "title": "Transaction",
+      "description": "A financial transaction log",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "accountId": { "type": "string" },
+        "type": { "type": "string", "enum": ["deposit", "withdrawal", "transfer_in", "transfer_out"] },
+        "amount": { "type": "number" },
+        "category": { "type": "string" },
+        "description": { "type": "string" },
+        "timestamp": { "type": "string", "format": "date-time" },
+        "recipientAccount": { "type": "string" },
+        "status": { "type": "string", "enum": ["completed", "pending", "failed"] }
+      },
+      "required": ["userId", "accountId", "type", "amount", "timestamp", "status"]
+    }
+  },
+  "firestore": {
+    "users/{userId}": {
+      "schema": "User",
+      "description": "Global user documents"
+    },
+    "accounts/{accountId}": {
+      "schema": "Account",
+      "description": "Bank accounts"
+    },
+    "transactions/{transactionId}": {
+      "schema": "Transaction",
+      "description": "Transaction logs"
+    }
+  }
+}
