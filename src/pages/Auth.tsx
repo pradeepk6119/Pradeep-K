@@ -23,13 +23,13 @@ export function AuthPage() {
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center justify-center w-12 h-12 bg-white rounded-lg text-slate-900 mb-6 font-bold text-xl underline underline-offset-4 shadow-2xl shadow-white/10">
-              N
+              IB
             </div>
             <h2 className="text-4xl font-bold text-white tracking-tight leading-tight mb-4">
-              Advanced Digital Banking <br/> <span className="italic serif text-slate-400 font-normal">Reimagined.</span>
+              India Bank Digital <br/> <span className="italic serif text-slate-400 font-normal">Banking Unified.</span>
             </h2>
             <p className="text-slate-400 text-lg leading-relaxed">
-              Experience a minimalist, robust, and secure way to manage your financial assets.
+              Experience the strength of India's most secure digital management portal.
             </p>
           </motion.div>
         </div>
@@ -39,9 +39,9 @@ export function AuthPage() {
       <div className="w-full md:w-[480px] bg-white flex flex-col justify-center px-8 md:px-16 py-12 relative">
         <div className="md:hidden flex items-center gap-3 mb-12">
           <div className="w-8 h-8 bg-slate-900 rounded-md flex items-center justify-center">
-            <span className="text-white font-bold text-xs underline underline-offset-4">N</span>
+            <span className="text-white font-bold text-xs underline underline-offset-4">IB</span>
           </div>
-          <h1 className="text-lg font-semibold tracking-tight text-slate-800 italic">NexusCore</h1>
+          <h1 className="text-lg font-semibold tracking-tight text-slate-800 italic">India Bank</h1>
         </div>
 
         <motion.div
@@ -85,7 +85,7 @@ export function AuthPage() {
         <div className="absolute bottom-8 left-8 right-8 text-center md:text-left">
           <p className="text-[10px] text-slate-400 uppercase tracking-[0.2em] font-medium leading-relaxed">
             Proprietary Banking Node <br/>
-            Nexus Financial Group © 2026
+            India Bank Financial Group © 2026
           </p>
         </div>
       </div>

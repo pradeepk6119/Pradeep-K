@@ -63,7 +63,7 @@ export function useFinance() {
         name,
         type,
         balance: initialBalance,
-        currency: 'USD',
+        currency: 'INR',
         accountNumber,
         createdAt: serverTimestamp(),
         updatedAt: serverTimestamp(),

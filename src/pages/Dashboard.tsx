@@ -29,7 +29,7 @@ export function Dashboard() {
         <div className="p-6 border border-slate-100 rounded-2xl bg-white shadow-sm">
           <p className="text-sm text-slate-500 mb-1">Total Assets</p>
           <h3 className="text-2xl font-bold text-slate-900 font-mono">
-            ${totalBalance.toLocaleString('en-US', { minimumFractionDigits: 2 })}
+            ₹{totalBalance.toLocaleString('en-IN', { minimumFractionDigits: 2 })}
           </h3>
           <div className="mt-4 flex items-center gap-2">
             <span className="px-2 py-1 bg-emerald-50 text-emerald-600 text-[10px] font-bold rounded-md uppercase">Stable Assets</span>
@@ -82,7 +82,7 @@ export function Dashboard() {
                     <td className={`px-6 py-4 text-right font-bold ${
                       tx.type === 'deposit' || tx.type === 'transfer_in' ? 'text-emerald-600' : 'text-slate-900'
                     }`}>
-                      {tx.type === 'deposit' || tx.type === 'transfer_in' ? '+' : '-'}${tx.amount.toFixed(2)}
+                      {tx.type === 'deposit' || tx.type === 'transfer_in' ? '+' : '-'}₹{tx.amount.toFixed(2)}
                     </td>
                     <td className="px-6 py-4">
                       <span className="px-2 py-0.5 bg-slate-100 rounded text-slate-600 font-medium uppercase text-[9px] tracking-tighter">
@@ -117,7 +117,7 @@ export function Dashboard() {
                     <span className="text-[10px] font-mono text-slate-400">****{acc.accountNumber.slice(-4)}</span>
                   </div>
                   <div className="flex justify-between items-baseline">
-                    <span className="text-lg font-bold font-mono">${acc.balance.toLocaleString()}</span>
+                    <span className="text-lg font-bold font-mono">₹{acc.balance.toLocaleString('en-IN')}</span>
                     <span className={`text-[9px] font-bold uppercase tracking-tight ${
                       acc.type === 'checking' ? 'text-indigo-600' : 'text-emerald-600'
                     }`}>{acc.type}</span>

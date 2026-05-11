@@ -36,9 +36,9 @@ export function Layout({ children, onNavigate, currentPage }: LayoutProps) {
         <div className="p-8">
           <div className="flex items-center gap-3 mb-10">
             <div className="w-8 h-8 bg-slate-900 rounded-md flex items-center justify-center">
-              <span className="text-white font-bold text-xs underline underline-offset-4">N</span>
+              <span className="text-white font-bold text-xs underline underline-offset-4">IB</span>
             </div>
-            <h1 className="text-lg font-semibold tracking-tight text-slate-800 italic">NexusCore</h1>
+            <h1 className="text-lg font-semibold tracking-tight text-slate-800 italic">India Bank</h1>
           </div>
           
           <nav className="space-y-1">

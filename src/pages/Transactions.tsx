@@ -69,7 +69,7 @@ export function TransactionsPage() {
               <TableHead className="px-8 text-[10px] uppercase font-bold text-slate-400 tracking-widest py-5">Category</TableHead>
               <TableHead className="px-8 text-[10px] uppercase font-bold text-slate-400 tracking-widest py-5">ID Ref</TableHead>
               <TableHead className="px-8 text-[10px] uppercase font-bold text-slate-400 tracking-widest py-5">Status</TableHead>
-              <TableHead className="px-8 text-[10px] uppercase font-bold text-slate-400 tracking-widest py-5 text-right">Value (USD)</TableHead>
+              <TableHead className="px-8 text-[10px] uppercase font-bold text-slate-400 tracking-widest py-5 text-right">Value (INR)</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -114,7 +114,7 @@ export function TransactionsPage() {
                   <TableCell className={`px-8 py-5 text-right font-bold font-mono text-xs ${
                     tx.type === 'deposit' || tx.type === 'transfer_in' ? 'text-emerald-600' : 'text-slate-900'
                   }`}>
-                    {tx.type === 'deposit' || tx.type === 'transfer_in' ? '+' : '-'}{tx.amount.toLocaleString('en-US', { minimumFractionDigits: 2 })}
+                    {tx.type === 'deposit' || tx.type === 'transfer_in' ? '+' : '-'}₹{tx.amount.toLocaleString('en-IN', { minimumFractionDigits: 2 })}
                   </TableCell>
                 </TableRow>
               ))

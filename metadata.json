@@ -1,6 +1,6 @@
 {
-  "name": "Nexus Bank",
-  "description": "A modern bank management system for managing accounts, tracking transactions, and customer details.",
+  "name": "India Bank",
+  "description": "Modern digital banking system localized for Indian financial management with Rupee (₹) support.",
   "requestFramePermissions": [],
   "majorCapabilities": []
 }

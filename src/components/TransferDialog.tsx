@@ -71,23 +71,23 @@ export function TransferDialog({ open, onOpenChange }: TransferDialogProps) {
                     <div className="text-sm font-bold">{acc.name}</div>
                     <div className="text-[10px] text-slate-400 font-mono tracking-wider">****{acc.accountNumber.slice(-4)}</div>
                   </div>
-                  <div className="text-sm font-mono font-bold">${acc.balance.toFixed(2)}</div>
+                  <div className="text-sm font-mono font-bold">₹{acc.balance.toFixed(2)}</div>
                 </button>
               ))}
             </div>
           </div>
           
           <div className="grid gap-2">
-            <label className="text-sm font-medium">Recipient Name / Desc</label>
+            <label className="text-sm font-medium">Recipient Name (e.g. UPI ID or Name)</label>
             <Input 
-              placeholder="e.g. Rent, John Doe, Food" 
+              placeholder="e.g. rent@okhdfc, John Doe" 
               value={description}
               onChange={(e) => setDescription(e.target.value)}
             />
           </div>
 
           <div className="grid gap-2">
-            <label className="text-sm font-medium">Amount ($)</label>
+            <label className="text-sm font-medium">Amount (₹)</label>
             <Input 
               type="number"
               placeholder="0.00" 

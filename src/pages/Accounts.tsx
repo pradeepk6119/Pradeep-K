@@ -55,7 +55,7 @@ export function AccountsPage() {
             <DialogHeader>
               <DialogTitle className="text-lg font-bold tracking-tight">Open New Account</DialogTitle>
               <DialogDescription className="text-slate-500 text-xs">
-                Initialize a new financial node in the NexusCore system.
+                Initialize a new financial node in the India Bank system.
               </DialogDescription>
             </DialogHeader>
             <div className="grid gap-6 py-6">
@@ -69,7 +69,7 @@ export function AccountsPage() {
                 />
               </div>
               <div className="grid gap-2">
-                <label className="text-[10px] font-bold text-slate-400 uppercase tracking-widest leading-none">Initial Capital ($)</label>
+                <label className="text-[10px] font-bold text-slate-400 uppercase tracking-widest leading-none">Initial Capital (₹)</label>
                 <Input 
                   type="number"
                   value={newAccBalance} 
@@ -137,7 +137,7 @@ export function AccountsPage() {
                 <div className="space-y-1">
                   <p className="text-[10px] text-slate-400 font-mono uppercase tracking-widest">Available Capital</p>
                   <p className="text-3xl font-bold font-mono text-slate-900">
-                    ${account.balance.toLocaleString('en-US', { minimumFractionDigits: 2 })}
+                    ₹{account.balance.toLocaleString('en-IN', { minimumFractionDigits: 2 })}
                   </p>
                 </div>
               </div>
@@ -145,7 +145,7 @@ export function AccountsPage() {
               <div className="px-8 pb-8 mt-auto">
                 <div className="flex items-center justify-between py-4 border-t border-slate-50 mb-6">
                    <span className="text-[10px] font-mono text-slate-400 tracking-wider">REF: {account.accountNumber}</span>
-                   <span className="text-[9px] font-bold text-emerald-600 uppercase tracking-tighter">Verified Agent</span>
+                   <span className="text-[9px] font-bold text-emerald-600 uppercase tracking-tighter">Verified Agent (India)</span>
                 </div>
                 
                 <div className="flex gap-3">
